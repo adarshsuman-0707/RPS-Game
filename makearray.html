@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator {
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.792);
+            width: 340px;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            border-radius: 30px;
+            box-shadow: -4px 14px 62px 17px rgba(0, 0, 0, 0.41);
+            -webkit-box-shadow: -4px 14px 62px 17px rgba(0, 0, 0, 0.41);
+            -moz-box-shadow: -4px 14px 62px 17px rgba(0, 0, 0, 0.41);
+
+        }
+
+        #outer {
+            height: 100vh;
+            width: 100wh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #result {
+            background-color: rgba(29, 27, 27, 0.314);
+            color: rgb(245, 228, 228);
+            width: 89%;
+            flex-basis: 490px;
+            height: 40px;
+            padding: 10px 10px 10px 10px;
+            text-align: right;
+            font-size: 29px;
+            border-radius: 20px;
+            margin: 10px;
+
+
+        }
+
+        #inner {
+            width: 100%;
+
+        }
+       
+        #btm4 {
+            position: absolute;
+            margin: 90px;
+            display: flex;
+            width: 300px;
+            gap: 9px;
+
+        }
+
+        #btm {
+            position: absolute;
+            margin: 150px;
+            display: flex;
+            width: 300px;
+            gap: 9px;
+
+        }
+
+        #btm1 {
+            position: absolute;
+            margin: 210px;
+            display: flex;
+            width: 300px;
+            gap: 9px;
+
+        }
+
+        #btm2 {
+            position: absolute;
+            margin: 270px;
+            display: flex;
+            width: 300px;
+            gap: 9px;
+
+        }
+        #btm3 {
+            position: absolute;
+            margin: 330px;
+            display: flex;
+            width: 300px;
+            gap: 9px;
+
+        }
+
+        .ac ,.del,.mod,.zeoss{
+            font-size: 19px;
+            color: RED;
+            background:rgb(6, 96, 110);
+        }
+        button {
+            font-family: 'times new roman';
+            font-weight: bold;
+            color: #6a4914 !important;
+            font-size: 20px;
+            gap: 5px;
+            text-shadow: 1px 1px 5px #b5de7c9a;
+            box-shadow: 2px 2px 2px #BEE2F9;
+            padding: 11px 17px;
+            border-radius: 10px;
+            border: 2px solid #3866A3;
+            background: #63B8EE;
+            width: 100%;
+            background: linear-gradient(to top, #63B8EE, #468CCF);
+        }
+
+        button:hover {
+            color: #e71b00 !important;
+            background: #468CCF;
+            background: linear-gradient(to top, #092239, #63b9ee9c);
+        }
+
+        #operator {
+            background-color: orangered;
+            color: red;
+        }
+
+        #operator:hover {
+            background-color: rgb(0, 255, 128);
+        }
+
+        @media screen and (max-width:350px) {
+            .calculator{
+                width:290px;
+                height:390px;
+            }
+            #result{
+                width:85%;
+            margin-left:5%;
+            }
+            body {
+                background-color: beige;
+            }
+
+            #btm {
+                justify-content: center;
+                position: absolute;
+                margin: 150px;
+                display: flex;
+                width: 250px;
+                gap: 7px;
+
+            }
+            #btm4 {
+                justify-content: center;
+
+            position: absolute;
+            margin: 90px;
+            display: flex;
+            width: 250px;
+            gap: 7px;
+
+        }
+
+            #btm1 {
+                justify-content: center;
+
+                position: absolute;
+                margin: 205px;
+                display: flex;
+                width: 250px;
+                gap: 7px;
+
+            }
+     
+
+            #btm2 {
+                justify-content: center;
+
+                position: absolute;
+                margin: 260px;
+                display: flex;
+                width: 250px;
+                gap: 7px;
+            
+
+            }
+
+            #btm3 {
+                justify-content: center;
+
+                position: absolute;
+                margin: 320px;
+                display: flex;
+                width: 250px;
+                gap: 7px;
+
+            }
+
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div class="calculator">
+            <div id="inner">
+                <p id="result">0</p>
+            </div><br>
+            <div id="btm4">
+                <button class="ac" id="AC" >AC</button>
+                <button id="DEL"  class="del">DEL</button>
+                <button id="modulo" class="mod">%</button>
+                <button id="zeros" class="zeoss">00</button>
+            </div>
+            <div id="btm">
+                <button id="nine" value="9">9</button>
+                <button id="eight" value="8">8</button>
+                <button id="seven" value="7">7</button>
+                <button id="operator" class="divi" value="/">/</button>
+            </div>
+            <div id="btm1">
+                <button id="six" value="6">6</button>
+                <button id="five" value="5">5</button>
+                <button id="four" value="4">4</button>
+                <button id="operator" class="mul" value="*">*</button>
+            </div>
+
+            <div id="btm2">
+                <button id="three" value="3">3</button>
+                <button id="two" value="2">2</button>
+                <button id="one" value="1">1</button>
+                <button id="operator" class="add"value="+">+</button>
+            </div>
+
+            <div id="btm3">
+                <button id="zero" value="0">0</button>
+                <button id="dot" value=".">.</button>
+                <button id="equal" value="=">=</button>
+                <button id="operator" class="sub" value="-">-</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+ 
+        let result = document.getElementById("result")
+
+let  buttons=document.querySelectorAll("button");
+let string=''
+let arr=Array.from(buttons)
+// console.log(arr);
+arr.forEach(button=>{
+    button.addEventListener('click',(e)=>{
+        if(e.target.innerHTML==='='){
+            string=eval(string);
+            result.innerHTML=string;
+
+        }else if(e.target.innerHTML==='AC'){
+            string="";
+            result.innerHTML=''
+
+        }
+        else if(e.target.innerHTML==='DEL'){
+            string =string.substring(0,string.length-1);
+
+            result.innerHTML=string;
+
+        }
+        else{
+         string +=e.target.innerHTML;
+        result.innerHTML=string;
+        }
+  
+
+       
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+    
+</script>
+
+</html>
